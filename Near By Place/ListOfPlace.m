@@ -7,7 +7,6 @@
 //
 
 #import "ListOfPlace.h"
-#import "Constant.pch"
 #import "LocationManager.h"
 #import "Place.h"
 @implementation ListOfPlace
@@ -17,7 +16,7 @@
     CLLocation * location = [LocationManager sharedInstance].currentLocation;
    
     NSString *placeUrl =
-    [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=1000&types=%@&key=%@",location.coordinate.latitude,location.coordinate.longitude,type,kGOOGLEAPI_KEY];
+    [NSString stringWithFormat:PLACEURL,location.coordinate.latitude,location.coordinate.longitude,type,kGOOGLEAPI_KEY];
     
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:[NSURL URLWithString:placeUrl]

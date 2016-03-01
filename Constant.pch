@@ -9,6 +9,11 @@
 #ifndef Constant_pch
 #define Constant_pch
 #define kGOOGLEAPI_KEY @"AIzaSyCiUL3FVScMAT9pXvETbzMQqNcuek2C2WQ"
+//AIzaSyCX0HXJwFJ_ECaYlkfJXafHt3dn4AzMH3Y
+#define REREANCIMAGEURL @"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=%@&key=%@"
+
+#define PLACEURL @"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&radius=1000&types=%@&key=%@"
+
 //@" AIzaSyDspg0dY_PEzRZo1VDa6LDyzFNfzeHCIXc "
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.

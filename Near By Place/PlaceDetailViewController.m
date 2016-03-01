@@ -8,6 +8,7 @@
 
 #import "PlaceDetailViewController.h"
 #import "UIImage+ImageAsync.h"
+
 @interface PlaceDetailViewController ()
 
 @end
@@ -23,6 +24,10 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self setValueOnScreen];
+}
 
 /*
 #pragma mark - Navigation
@@ -36,9 +41,21 @@
 -(void)setValueOnScreen
 {
     self.name.text  = self.placeDetail.name;
-    self.detail.text  = self.placeDetail.reference;
-    [UIImage loadFromURL:[NSURL URLWithString:self.placeDetail.icon] callback:^(UIImage *image){
-        self.image.image   = image;
+    self.detail.text  = self.placeDetail.vicinity;
+    NSLog(@"image Refreance : \n %@ ",[NSString stringWithFormat:REREANCIMAGEURL,self.placeDetail.reference,kGOOGLEAPI_KEY]);
+    [UIImage loadFromURL:[NSURL URLWithString:[NSString stringWithFormat:REREANCIMAGEURL,self.placeDetail.reference,kGOOGLEAPI_KEY] ]callback:^(UIImage *image){
+        if (image) {
+            self.image.image   = image;
+        }
+        else
+        {
+            self.image.backgroundColor = [UIColor blackColor];
+            UILabel *notFound = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 150, 150)];
+            notFound.text = @"Image not Found ";
+            notFound.textColor = [UIColor whiteColor];
+          //  notFound.frame = CGRectMake(self.image.frame.size.width/2, self.image.frame.size.height/2, notFound.frame.size.width, notFound.frame.size.height);
+            [self.image addSubview: notFound];
+        }
     } ];
 }
 @end
