@@ -1,0 +1,16 @@
+//
+//  Constant.pch
+//  Near By Place
+//
+//  Created by MAC23 on 01/03/16.
+//  Copyright © 2016 Kapil Malviya. All rights reserved.
+//
+
+#ifndef Constant_pch
+#define Constant_pch
+#define kGOOGLEAPI_KEY @"AIzaSyCiUL3FVScMAT9pXvETbzMQqNcuek2C2WQ"
+//@" AIzaSyDspg0dY_PEzRZo1VDa6LDyzFNfzeHCIXc "
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* Constant_pch */
