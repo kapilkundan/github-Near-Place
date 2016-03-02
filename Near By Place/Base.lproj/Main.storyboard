@@ -120,12 +120,16 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfI-Hi-1oU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OfI-Hi-1oU">
                                 <rect key="frame" x="12" y="347" width="568" height="217"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xdY-aA-krF">
+                                <rect key="frame" x="516" y="20" width="46" height="30"/>
+                                <state key="normal" title="Map"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -142,6 +146,8 @@
                             <constraint firstItem="OfI-Hi-1oU" firstAttribute="top" secondItem="kmd-Hv-Xwz" secondAttribute="bottom" constant="2" id="yiG-MC-5fI"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="detail" destination="OfI-Hi-1oU" id="ZHa-qh-oaN"/>
                         <outlet property="image" destination="qdM-xb-4a6" id="pG4-24-y5A"/>
@@ -151,6 +157,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2445" y="331"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zQp-Bm-xMz">
+            <objects>
+                <viewController id="xYE-u0-hY4" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NXh-PS-wZ6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oxa-aG-xwD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kYr-B3-QTf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="H7o-aL-5bh">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="XxR-ao-gCg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PnI-Mc-Po4">
+                                <rect key="frame" x="20" y="7" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lM2-yI-Rtm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4349" y="183"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UCP-HK-Qol">
@@ -169,6 +202,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oli-9c-LgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="134" y="368"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x2v-9j-3hz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lNS-wv-Gs1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="J3Q-Lc-57P">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xYE-u0-hY4" kind="relationship" relationship="rootViewController" id="bDX-7Z-UzH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jHV-9D-WTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3537" y="183"/>
         </scene>
     </scenes>
 </document>

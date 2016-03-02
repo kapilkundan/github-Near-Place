@@ -8,7 +8,7 @@
 
 #import "PlaceDetailViewController.h"
 #import "UIImage+ImageAsync.h"
-
+#import "ViewController.h"
 @interface PlaceDetailViewController ()
 
 @end
@@ -18,6 +18,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIBarButtonItem * mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(showOnGoogleMap:)];
+    self.navigationItem.rightBarButtonItem = mapButton;
+    
+}
+
+-(void)showOnGoogleMap:(id)sender
+{
+    UIStoryboard *stroryBoard = [UIStoryboard storyboardWithName:@"Main.storyboard" bundle:[NSBundle mainBundle]];
+
+    ViewController *mapView = (ViewController*)[stroryBoard instantiateViewControllerWithIdentifier:@"ViewController"];
+    [self presentViewController:mapView animated:YES completion:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {

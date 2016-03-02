@@ -8,6 +8,7 @@
 
 #ifndef Constant_pch
 #define Constant_pch
+#define PREF_DATABASE_NAME @"nearByPlace.db"
 #define kGOOGLEAPI_KEY @"AIzaSyCiUL3FVScMAT9pXvETbzMQqNcuek2C2WQ"
 //
 #define REREANCIMAGEURL @"https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=%@&key=%@"
