@@ -25,7 +25,9 @@
 		DBFED0F71C857D5F00B5CE48 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFED0F61C857D5F00B5CE48 /* Place.m */; };
 		DBFED0FA1C858DCB00B5CE48 /* UIImage+ImageAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFED0F91C858DCB00B5CE48 /* UIImage+ImageAsync.m */; };
 		DBFED0FE1C85AF2E00B5CE48 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFED0FD1C85AF2E00B5CE48 /* MBProgressHUD.m */; };
-		DBFED1001C86DAB800B5CE48 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DBFED0FF1C86DAB700B5CE48 /* GoogleMaps.bundle */; };
+		DBFED1031C86DCDD00B5CE48 /* DbAccess.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFED1021C86DCDD00B5CE48 /* DbAccess.m */; };
+		DBFED1071C86E04600B5CE48 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFED1051C86E04600B5CE48 /* libsqlite3.0.tbd */; };
+		DBFED1081C86E04600B5CE48 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DBFED1061C86E04600B5CE48 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,7 +84,11 @@
 		DBFED0F91C858DCB00B5CE48 /* UIImage+ImageAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageAsync.m"; sourceTree = "<group>"; };
 		DBFED0FC1C85AF2E00B5CE48 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		DBFED0FD1C85AF2E00B5CE48 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
-		DBFED0FF1C86DAB700B5CE48 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		DBFED1011C86DCDC00B5CE48 /* DbAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DbAccess.h; sourceTree = "<group>"; };
+		DBFED1021C86DCDD00B5CE48 /* DbAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DbAccess.m; sourceTree = "<group>"; };
+		DBFED1041C86E02100B5CE48 /* nearByPlace.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = nearByPlace.db; sourceTree = "<group>"; };
+		DBFED1051C86E04600B5CE48 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		DBFED1061C86E04600B5CE48 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBFED1071C86E04600B5CE48 /* libsqlite3.0.tbd in Frameworks */,
+				DBFED1081C86E04600B5CE48 /* libsqlite3.tbd in Frameworks */,
 				DBFED0EF1C85515300B5CE48 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -114,12 +122,14 @@
 		DBFED0A01C84860900B5CE48 = {
 			isa = PBXGroup;
 			children = (
+				DBFED1051C86E04600B5CE48 /* libsqlite3.0.tbd */,
+				DBFED1061C86E04600B5CE48 /* libsqlite3.tbd */,
 				DBFED0EE1C85515300B5CE48 /* CoreLocation.framework */,
 				DBFED0AB1C84860900B5CE48 /* Near By Place */,
 				DBFED0C51C84860E00B5CE48 /* Near By PlaceTests */,
 				DBFED0D01C84860F00B5CE48 /* Near By PlaceUITests */,
 				DBFED0AA1C84860900B5CE48 /* Products */,
-				DBFED0FF1C86DAB700B5CE48 /* GoogleMaps.bundle */,
+				DBFED1041C86E02100B5CE48 /* nearByPlace.db */,
 				DBFED0F41C85595800B5CE48 /* Constant.pch */,
 			);
 			sourceTree = "<group>";
@@ -158,10 +168,13 @@
 				DBFED0B51C84860900B5CE48 /* Main.storyboard */,
 				DBFED0F51C857D5F00B5CE48 /* Place.h */,
 				DBFED0F61C857D5F00B5CE48 /* Place.m */,
+				DBFED1011C86DCDC00B5CE48 /* DbAccess.h */,
+				DBFED1021C86DCDD00B5CE48 /* DbAccess.m */,
 				DBFED0FB1C859E0D00B5CE48 /* Image */,
 				DBFED0B81C84860A00B5CE48 /* Assets.xcassets */,
 				DBFED0BA1C84860A00B5CE48 /* LaunchScreen.storyboard */,
 				DBFED0BD1C84860A00B5CE48 /* Info.plist */,
+				DBFED10E1C86F69F00B5CE48 /* Framwork */,
 				DBFED0AC1C84860900B5CE48 /* Supporting Files */,
 			);
 			path = "Near By Place";
@@ -200,6 +213,13 @@
 				DBFED0F91C858DCB00B5CE48 /* UIImage+ImageAsync.m */,
 			);
 			name = Image;
+			sourceTree = "<group>";
+		};
+		DBFED10E1C86F69F00B5CE48 /* Framwork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Framwork;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,7 +328,6 @@
 				DBFED0BC1C84860A00B5CE48 /* LaunchScreen.storyboard in Resources */,
 				DBFED0B91C84860A00B5CE48 /* Assets.xcassets in Resources */,
 				DBFED0B71C84860900B5CE48 /* Main.storyboard in Resources */,
-				DBFED1001C86DAB800B5CE48 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +361,7 @@
 				DBFED0F71C857D5F00B5CE48 /* Place.m in Sources */,
 				DBFED0FE1C85AF2E00B5CE48 /* MBProgressHUD.m in Sources */,
 				DBFED0B41C84860900B5CE48 /* ViewController.m in Sources */,
+				DBFED1031C86DCDD00B5CE48 /* DbAccess.m in Sources */,
 				DBFED0E71C854C2600B5CE48 /* PlaceDetailViewController.m in Sources */,
 				DBFED0B11C84860900B5CE48 /* AppDelegate.m in Sources */,
 				DBFED0AE1C84860900B5CE48 /* main.m in Sources */,
@@ -485,6 +505,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Near",
+					By,
+					Place,
+				);
 				INFOPLIST_FILE = "Near By Place/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.diaspark.inhouse.Near-By-Place";
@@ -496,6 +523,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Near",
+					By,
+					Place,
+				);
 				INFOPLIST_FILE = "Near By Place/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.diaspark.inhouse.Near-By-Place";

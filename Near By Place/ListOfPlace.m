@@ -13,6 +13,7 @@
 - (void)listOfPlaceForType:(NSString*)type afterComplition:(void (^)(NSArray *listOfPlaces,NSError *error))finishBlock;
 {
         self.completeQueryForPlace = finishBlock;
+
     CLLocation * location = [LocationManager sharedInstance].currentLocation;
    
     NSString *placeUrl =

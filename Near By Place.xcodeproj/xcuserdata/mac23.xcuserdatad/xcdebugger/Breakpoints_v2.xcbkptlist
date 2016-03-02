@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Near By Place/UIImage+ImageAsync.m"
-            timestampString = "478515318.217202"
+            timestampString = "478603385.090121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "+loadFromURL:callback:"
             landmarkType = "5">
             <Locations>
@@ -154,11 +154,11 @@
                   moduleName = "Near By Place"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/Kapil%20HD/Task/Near%20By%20Place/Near%20By%20Place/UIImage+ImageAsync.m"
-                  timestampString = "478596623.744374"
+                  timestampString = "478612166.801613"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
                   offsetFromSymbolStart = "108">
                </Location>
                <Location
@@ -169,11 +169,11 @@
                   moduleName = "Near By Place"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/Kapil%20HD/Task/Near%20By%20Place/Near%20By%20Place/UIImage+ImageAsync.m"
-                  timestampString = "478596623.744833"
+                  timestampString = "478612166.801842"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
                   offsetFromSymbolStart = "44">
                </Location>
             </Locations>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Near By Place/UIImage+ImageAsync.m"
-            timestampString = "478515319.825759"
+            timestampString = "478603385.090121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "+loadFromURL:callback:"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,13 +234,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Near By Place/PlaceDetailViewController.m"
-            timestampString = "478519778.187555"
+            timestampString = "478603385.090121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "-setValueOnScreen"
-            landmarkType = "5">
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "@implementation PlaceDetailViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -256,6 +256,22 @@
             startingLineNumber = "51"
             endingLineNumber = "51"
             landmarkName = "-featchList:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Near By Place/LocationManager.m"
+            timestampString = "478611951.062894"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-locationManager:didFailWithError:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
