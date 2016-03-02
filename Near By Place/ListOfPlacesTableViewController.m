@@ -12,7 +12,10 @@
 #import "UIImage+ImageAsync.h"
 #import "PlaceDetailViewController.h"
 @interface ListOfPlacesTableViewController ()
+{
 
+UIRefreshControl *refreshControl;
+}
 @end
 
 @implementation ListOfPlacesTableViewController
@@ -20,18 +23,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    listOfPlace =  [[NSArray alloc] init];
-  
+    listOfPlace =  [[NSMutableArray alloc] init];
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(featchList:) forControlEvents:UIControlEventValueChanged];
+    
+    [self.tableView addSubview:self.refreshControl];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+
+    self.tableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height);
+    [self.refreshControl beginRefreshing];
+}
 -(void)featchList:(NSString *)type
 {
+ //   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 ListOfPlace *listOfPlaceModel = [ListOfPlace new];
-  [listOfPlaceModel listOfPlaceForType:type afterComplition:^(NSArray *list){  listOfPlace = [list mutableCopy]; [self.tableView reloadData]; } ];
+    [self.refreshControl beginRefreshing ];
+  [listOfPlaceModel listOfPlaceForType:self.typeOfPlace afterComplition:^(NSArray *list,NSError *error){
+      if (error) {
+          
+          UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Near By Place" message:[error localizedDescription] delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+          [alert show];
+      }
+      else
+      {
+          listOfPlace = [list mutableCopy];
+          [self.tableView reloadData];
+      }
+      
+   //   [MBProgressHUD hideHUDForView:self.view animated:YES];
+  [self.refreshControl endRefreshing];
+  } ];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -47,6 +76,7 @@ ListOfPlace *listOfPlaceModel = [ListOfPlace new];
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of rows
+ 
     return listOfPlace.count;
 }
 
@@ -61,11 +91,13 @@ ListOfPlace *listOfPlaceModel = [ListOfPlace new];
         [UIImage loadFromURL:[NSURL URLWithString:place.icon] callback:^(UIImage *image) {
             icon.image = image;
             place.imageIcon = image;
+
             [listOfPlace replaceObjectAtIndex:indexPath.row withObject:place];
         }];
     }
     else{
         icon.image = place.imageIcon;
+
     }
   
     // Configure the cell...

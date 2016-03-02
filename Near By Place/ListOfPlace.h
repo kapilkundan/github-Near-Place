@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-typedef void (^ComplitionQuery)(NSArray *listOfPlaces);
+typedef void (^ComplitionQuery)(NSArray *listOfPlaces,NSError *error);
 @interface ListOfPlace : NSObject
-- (void)listOfPlaceForType:(NSString*)type afterComplition:(void (^)(NSArray *listOfPlaces))finishBlock;
+- (void)listOfPlaceForType:(NSString*)type afterComplition:(void (^)(NSArray *listOfPlaces,NSError *error))finishBlock;
 @property (copy, nonatomic) ComplitionQuery completeQueryForPlace;
 @end

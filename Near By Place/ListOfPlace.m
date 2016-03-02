@@ -10,7 +10,7 @@
 #import "LocationManager.h"
 #import "Place.h"
 @implementation ListOfPlace
-- (void)listOfPlaceForType:(NSString*)type afterComplition:(void (^)(NSArray *listOfPlaces))finishBlock;
+- (void)listOfPlaceForType:(NSString*)type afterComplition:(void (^)(NSArray *listOfPlaces,NSError *error))finishBlock;
 {
         self.completeQueryForPlace = finishBlock;
     CLLocation * location = [LocationManager sharedInstance].currentLocation;
@@ -24,6 +24,30 @@
                                 NSURLResponse *response,
                                 NSError *error) {
                    NSError* errorData;
+                
+                if (error) {
+                    NSLog(@"dataTask error: %@", error);
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                        
+                        self.completeQueryForPlace(@[],error);
+                        
+                        
+                    });
+                    return ;
+
+                }
+                
+                if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+                    
+                    NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+                    
+                    if (statusCode != 200) {
+                        NSLog(@" HTTP status code: %d", statusCode);
+                  
+                    }
+                }
+                
                 // handle response
                                NSDictionary* json = [NSJSONSerialization
                                       JSONObjectWithData:data
@@ -38,7 +62,6 @@
                 NSMutableArray *groups = [[NSMutableArray alloc] init];
                 
                 NSArray *results1 = [json valueForKey:@"results"];
-                NSLog(@"Count %d", results1.count);
                 
                 for (NSDictionary *groupDic in results1) {
                     Place *place = [[Place alloc] init];
@@ -51,8 +74,13 @@
                     
                     [groups addObject:place];
                 }
-                
-                self.completeQueryForPlace(groups);
+                dispatch_async(dispatch_get_main_queue(), ^{
+              
+
+                        self.completeQueryForPlace(groups,error);
+
+           
+                });
                 NSLog(@"Google Data: %@ ", places);
             }] resume];
 }

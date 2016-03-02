@@ -25,6 +25,7 @@
 		DBFED0F71C857D5F00B5CE48 /* Place.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFED0F61C857D5F00B5CE48 /* Place.m */; };
 		DBFED0FA1C858DCB00B5CE48 /* UIImage+ImageAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFED0F91C858DCB00B5CE48 /* UIImage+ImageAsync.m */; };
 		DBFED0FE1C85AF2E00B5CE48 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFED0FD1C85AF2E00B5CE48 /* MBProgressHUD.m */; };
+		DBFED1001C86DAB800B5CE48 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = DBFED0FF1C86DAB700B5CE48 /* GoogleMaps.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		DBFED0F91C858DCB00B5CE48 /* UIImage+ImageAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageAsync.m"; sourceTree = "<group>"; };
 		DBFED0FC1C85AF2E00B5CE48 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		DBFED0FD1C85AF2E00B5CE48 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		DBFED0FF1C86DAB700B5CE48 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				DBFED0C51C84860E00B5CE48 /* Near By PlaceTests */,
 				DBFED0D01C84860F00B5CE48 /* Near By PlaceUITests */,
 				DBFED0AA1C84860900B5CE48 /* Products */,
+				DBFED0FF1C86DAB700B5CE48 /* GoogleMaps.bundle */,
 				DBFED0F41C85595800B5CE48 /* Constant.pch */,
 			);
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 				DBFED0BC1C84860A00B5CE48 /* LaunchScreen.storyboard in Resources */,
 				DBFED0B91C84860A00B5CE48 /* Assets.xcassets in Resources */,
 				DBFED0B71C84860900B5CE48 /* Main.storyboard in Resources */,
+				DBFED1001C86DAB800B5CE48 /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

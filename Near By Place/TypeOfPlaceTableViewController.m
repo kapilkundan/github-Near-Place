@@ -94,6 +94,7 @@
     if ([segue.identifier  isEqual: @"ListOfPlacesTableViewController"] ) {
         ListOfPlacesTableViewController * listOfPlaceController = (ListOfPlacesTableViewController*) [segue destinationViewController];
         NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+        listOfPlaceController.typeOfPlace = [listOfPlaces objectAtIndex:path.row];
         [listOfPlaceController featchList:[listOfPlaces objectAtIndex:path.row]];
     }
 

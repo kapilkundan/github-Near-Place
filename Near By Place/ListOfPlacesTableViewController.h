@@ -12,6 +12,8 @@
 @interface ListOfPlacesTableViewController : UITableViewController
 {
     NSMutableArray * listOfPlace;
+    
 }
+@property (nonatomic,strong) NSString * typeOfPlace;
 -(void)featchList:(NSString*)type;
 @end

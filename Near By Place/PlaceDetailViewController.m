@@ -42,6 +42,7 @@
 {
     self.name.text  = self.placeDetail.name;
     self.detail.text  = self.placeDetail.vicinity;
+    [MBProgressHUD showHUDAddedTo:self.image animated:YES];
     NSLog(@"image Refreance : \n %@ ",[NSString stringWithFormat:REREANCIMAGEURL,self.placeDetail.reference,kGOOGLEAPI_KEY]);
     [UIImage loadFromURL:[NSURL URLWithString:[NSString stringWithFormat:REREANCIMAGEURL,self.placeDetail.reference,kGOOGLEAPI_KEY] ]callback:^(UIImage *image){
         if (image) {
@@ -56,6 +57,8 @@
           //  notFound.frame = CGRectMake(self.image.frame.size.width/2, self.image.frame.size.height/2, notFound.frame.size.width, notFound.frame.size.height);
             [self.image addSubview: notFound];
         }
+        [MBProgressHUD hideHUDForView:self.image animated:YES];
+
     } ];
 }
 @end
