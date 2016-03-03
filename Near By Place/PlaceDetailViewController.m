@@ -9,6 +9,7 @@
 #import "PlaceDetailViewController.h"
 #import "UIImage+ImageAsync.h"
 #import "ViewController.h"
+#import "FavoritesPlace.h"
 @interface PlaceDetailViewController ()
 
 @end
@@ -18,17 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIBarButtonItem * mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Map" style:UIBarButtonItemStylePlain target:self action:@selector(showOnGoogleMap:)];
+    UIBarButtonItem * mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Favorite" style:UIBarButtonItemStylePlain target:self action:@selector(favorites:)];
     self.navigationItem.rightBarButtonItem = mapButton;
     
 }
 
--(void)showOnGoogleMap:(id)sender
+-(void)favorites:(id)sender
 {
-    UIStoryboard *stroryBoard = [UIStoryboard storyboardWithName:@"Main.storyboard" bundle:[NSBundle mainBundle]];
-
-    ViewController *mapView = (ViewController*)[stroryBoard instantiateViewControllerWithIdentifier:@"ViewController"];
-    [self presentViewController:mapView animated:YES completion:nil];
+    [FavoritesPlace addFavoritPlace:self.placeDetail];
 
 }
 

@@ -40,5 +40,7 @@
 	<string>Location Required </string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>Location Required </string>
+	<key>NSLocationUsageDescription</key>
+	<string>Location Required</string>
 </dict>
 </plist>

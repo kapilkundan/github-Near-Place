@@ -1,42 +1,34 @@
 //
-//  TypeOfPlaceTableViewController.m
+//  FavoritesTableViewController.m
 //  Near By Place
 //
-//  Created by MAC23 on 01/03/16.
+//  Created by MAC23 on 03/03/16.
 //  Copyright © 2016 Kapil Malviya. All rights reserved.
 //
 
-#import "TypeOfPlaceTableViewController.h"
-#import "TypeOfPlace.h"
 #import "FavoritesTableViewController.h"
-#import "ListOfPlacesTableViewController.h"
-#import "UIView+Gradient.h"
-@interface TypeOfPlaceTableViewController ()
+#import "FavoritesPlace.h"
+#import "Place.h"
+@interface FavoritesTableViewController ()
+{
 
+    NSArray * favoritePlaces ;
+}
 @end
 
-@implementation TypeOfPlaceTableViewController
+@implementation FavoritesTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    listOfPlaces = [[NSArray alloc] initWithArray:[TypeOfPlace getTypeOfPlace]];
+    favoritePlaces  = [NSArray new];
+      favoritePlaces =  [FavoritesPlace selectFavoritePlace];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-  //  UIBarButtonItem * rightItemButton = [[UIBarButtonItem alloc] initWithTitle:@"Favorites" style:UIBarButtonItemStyleDone target:self action:@selector(showFavorites:)];
-   // self.navigationItem.rightBarButtonItem = rightItemButton;
 }
 
-/*
--(void)showFavorites:(id)sender
-{
-
-    UIStoryboard *stroryBoard = MainStoryBoard;
-    FavoritesTableViewController * favortiesPlaceViewController = [stroryBoard instantiateViewControllerWithIdentifier:@"FavoritesTableViewController"];
-    [self presentViewController:favortiesPlaceViewController animated:YES completion:nil];
-}*/
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -49,14 +41,15 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return listOfPlaces.count;
+    return favoritePlaces.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    NSString *text  = listOfPlaces[indexPath.row];
-    cell.textLabel.text  = text.capitalizedString;
+ //  Place * favoritePlace  =  favoritePlaces[indexPath.row];
+    cell.textLabel.text  =  [favoritePlaces[indexPath.row] valueForKey:@"name"];
+    // Configure the cell...
     
     return cell;
 }
@@ -96,21 +89,14 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([segue.identifier  isEqualToString: @"ListOfPlacesTableViewController"] ) {
-        ListOfPlacesTableViewController * listOfPlaceController = (ListOfPlacesTableViewController*) [segue destinationViewController];
-        NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-        listOfPlaceController.typeOfPlace = [listOfPlaces objectAtIndex:path.row];
-        [listOfPlaceController featchList:[listOfPlaces objectAtIndex:path.row]];
-    }
-
 }
-
+*/
 
 @end

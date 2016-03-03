@@ -4,7 +4,7 @@
 
 @implementation DbAccess
 //@synthesize dbName;
-static NSString *dbName ; 
+static NSString *dbName  = PREF_DATABASE_NAME;
 
 
 
@@ -12,18 +12,7 @@ static NSString *dbName ;
 //static NSOperationQueue * DatabaseQueue = nil;
 
 + (void) setDbName {
-	// vk 100917
-	// hardcoded right now, later to come from setting. 
-	// save into plist into harddisk.
-	// so that multiple catalog can be used. 
-	/*
-	dbName = PREF_DATABASE_NAME;
 	
-	if([Utils getBoolWithKey:PREF_USE_DEMODATABASE] == TRUE)
-	{
-		dbName = PREF_DEMO_DATABASE_NAME;
-	}
-    */
 }
 
 // 

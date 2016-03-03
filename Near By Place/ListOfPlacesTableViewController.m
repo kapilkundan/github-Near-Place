@@ -43,7 +43,8 @@ UIRefreshControl *refreshControl;
 }
 -(void)featchList:(NSString *)type
 {
- //   [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+
 ListOfPlace *listOfPlaceModel = [ListOfPlace new];
     [self.refreshControl beginRefreshing ];
   [listOfPlaceModel listOfPlaceForType:self.typeOfPlace afterComplition:^(NSArray *list,NSError *error){
@@ -70,12 +71,10 @@ ListOfPlace *listOfPlaceModel = [ListOfPlace new];
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
  
     return listOfPlace.count;
 }

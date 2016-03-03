@@ -18,5 +18,6 @@
 @property (strong, nonatomic) NSString* reference;
 @property (strong, nonatomic) NSString* scope;
 @property (strong, nonatomic) NSString* types;
+@property (strong, nonatomic) NSString* keyId;
 @property (strong,nonatomic) UIImage *imageIcon;
 @end

@@ -19,4 +19,6 @@
 + (void)executeSQL:(NSString *)sql;
 + (void)setDbName;
 + (void)closeDataBase;
++(void)createDBSchema;
+
 @end

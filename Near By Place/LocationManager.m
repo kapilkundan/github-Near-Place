@@ -35,10 +35,9 @@
 }
 
 
--(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
-    
-    NSLog(@"%@",error.userInfo);
-    if(![CLLocationManager locationServicesEnabled]){
+-(BOOL)isLocationEnable
+{
+    if([CLLocationManager locationServicesEnabled]){
         
         NSLog(@"Location Services Enabled");
         
@@ -51,7 +50,47 @@
             [alert show];
         }
     }
+    else {
+        UIAlertView    *alert = [[UIAlertView alloc] initWithTitle:@"Location Service"
+                                                           message:@"To re-enable Location Services From Settings, please go to Settings and turn on Location Service."
+                                                          delegate:nil
+                                                 cancelButtonTitle:@"OK"
+                                                 otherButtonTitles:nil];
+        [alert show];
+    
+    }
+
+    return [CLLocationManager locationServicesEnabled];
 }
+- (void)locationManager: (CLLocationManager *)manager
+       didFailWithError: (NSError *)error
+{
+    [manager stopUpdatingLocation];
+    NSLog(@"error%@",error);
+    switch([error code])
+    {
+        case kCLErrorNetwork:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Please check your network connection." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+            
+        }
+            break;
+        case kCLErrorDenied:{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"user has denied to use current Location " delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+            break;
+        default:
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"unknown  error" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+            break;
+    }
+}
+
+
 - (void)locationManager:(CLLocationManager *)manager
      didUpdateLocations:(NSArray*)locations
 {

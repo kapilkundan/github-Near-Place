@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB4AE65D1C8821CE00BA789F /* FavoritesPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4AE65C1C8821CE00BA789F /* FavoritesPlace.m */; };
+		DB4AE6631C88269B00BA789F /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4AE6621C88269B00BA789F /* FavoritesTableViewController.m */; };
+		DB4AE6641C88283F00BA789F /* nearByPlace.db in Resources */ = {isa = PBXBuildFile; fileRef = DBFED1041C86E02100B5CE48 /* nearByPlace.db */; };
+		DB4BEA8D1C8839C800B8B707 /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4BEA8C1C8839C800B8B707 /* UIView+Gradient.m */; };
 		DBFED0AE1C84860900B5CE48 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFED0AD1C84860900B5CE48 /* main.m */; };
 		DBFED0B11C84860900B5CE48 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFED0B01C84860900B5CE48 /* AppDelegate.m */; };
 		DBFED0B41C84860900B5CE48 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBFED0B31C84860900B5CE48 /* ViewController.m */; };
@@ -48,6 +52,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB4AE65B1C8821CE00BA789F /* FavoritesPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesPlace.h; sourceTree = "<group>"; };
+		DB4AE65C1C8821CE00BA789F /* FavoritesPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesPlace.m; sourceTree = "<group>"; };
+		DB4AE6611C88269B00BA789F /* FavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewController.h; sourceTree = "<group>"; };
+		DB4AE6621C88269B00BA789F /* FavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewController.m; sourceTree = "<group>"; };
+		DB4BEA8B1C8839C800B8B707 /* UIView+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gradient.h"; sourceTree = "<group>"; };
+		DB4BEA8C1C8839C800B8B707 /* UIView+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gradient.m"; sourceTree = "<group>"; };
 		DBFED0A91C84860900B5CE48 /* Near By Place.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Near By Place.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBFED0AD1C84860900B5CE48 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DBFED0AF1C84860900B5CE48 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -156,6 +166,8 @@
 				DBFED0E51C854C2600B5CE48 /* PlaceDetailViewController.h */,
 				DBFED0E61C854C2600B5CE48 /* PlaceDetailViewController.m */,
 				DBFED0E21C854C0C00B5CE48 /* ListOfPlacesTableViewController.h */,
+				DB4AE6611C88269B00BA789F /* FavoritesTableViewController.h */,
+				DB4AE6621C88269B00BA789F /* FavoritesTableViewController.m */,
 				DBFED0E31C854C0C00B5CE48 /* ListOfPlacesTableViewController.m */,
 				DBFED0DF1C854BF200B5CE48 /* TypeOfPlaceTableViewController.h */,
 				DBFED0E01C854BF200B5CE48 /* TypeOfPlaceTableViewController.m */,
@@ -165,11 +177,15 @@
 				DBFED0EC1C8550CC00B5CE48 /* LocationManager.m */,
 				DBFED0F01C85584B00B5CE48 /* ListOfPlace.h */,
 				DBFED0F11C85584B00B5CE48 /* ListOfPlace.m */,
-				DBFED0B51C84860900B5CE48 /* Main.storyboard */,
 				DBFED0F51C857D5F00B5CE48 /* Place.h */,
 				DBFED0F61C857D5F00B5CE48 /* Place.m */,
 				DBFED1011C86DCDC00B5CE48 /* DbAccess.h */,
 				DBFED1021C86DCDD00B5CE48 /* DbAccess.m */,
+				DB4AE65B1C8821CE00BA789F /* FavoritesPlace.h */,
+				DB4AE65C1C8821CE00BA789F /* FavoritesPlace.m */,
+				DB4BEA8B1C8839C800B8B707 /* UIView+Gradient.h */,
+				DB4BEA8C1C8839C800B8B707 /* UIView+Gradient.m */,
+				DBFED0B51C84860900B5CE48 /* Main.storyboard */,
 				DBFED0FB1C859E0D00B5CE48 /* Image */,
 				DBFED0B81C84860A00B5CE48 /* Assets.xcassets */,
 				DBFED0BA1C84860A00B5CE48 /* LaunchScreen.storyboard */,
@@ -325,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB4AE6641C88283F00BA789F /* nearByPlace.db in Resources */,
 				DBFED0BC1C84860A00B5CE48 /* LaunchScreen.storyboard in Resources */,
 				DBFED0B91C84860A00B5CE48 /* Assets.xcassets in Resources */,
 				DBFED0B71C84860900B5CE48 /* Main.storyboard in Resources */,
@@ -353,7 +370,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBFED0ED1C8550CC00B5CE48 /* LocationManager.m in Sources */,
+				DB4AE65D1C8821CE00BA789F /* FavoritesPlace.m in Sources */,
 				DBFED0E41C854C0C00B5CE48 /* ListOfPlacesTableViewController.m in Sources */,
+				DB4AE6631C88269B00BA789F /* FavoritesTableViewController.m in Sources */,
 				DBFED0EA1C854C3B00B5CE48 /* TypeOfPlace.m in Sources */,
 				DBFED0F21C85584B00B5CE48 /* ListOfPlace.m in Sources */,
 				DBFED0FA1C858DCB00B5CE48 /* UIImage+ImageAsync.m in Sources */,
@@ -364,6 +383,7 @@
 				DBFED1031C86DCDD00B5CE48 /* DbAccess.m in Sources */,
 				DBFED0E71C854C2600B5CE48 /* PlaceDetailViewController.m in Sources */,
 				DBFED0B11C84860900B5CE48 /* AppDelegate.m in Sources */,
+				DB4BEA8D1C8839C800B8B707 /* UIView+Gradient.m in Sources */,
 				DBFED0AE1C84860900B5CE48 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -456,7 +476,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -494,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

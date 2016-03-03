@@ -12,7 +12,9 @@
 @property (strong, nonatomic) CLLocationManager *locationManager;
 @property (strong, nonatomic) CLLocation *currentLocation;
 
+
 +(LocationManager*)sharedInstance;
+-(BOOL)isLocationEnable;
 - (void)startUpdatingLocation;
 
 @end
