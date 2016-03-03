@@ -96,7 +96,7 @@
 		DBFED0FD1C85AF2E00B5CE48 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		DBFED1011C86DCDC00B5CE48 /* DbAccess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DbAccess.h; sourceTree = "<group>"; };
 		DBFED1021C86DCDD00B5CE48 /* DbAccess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DbAccess.m; sourceTree = "<group>"; };
-		DBFED1041C86E02100B5CE48 /* nearByPlace.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = nearByPlace.db; sourceTree = "<group>"; };
+		DBFED1041C86E02100B5CE48 /* nearByPlace.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = nearByPlace.db; path = ../nearByPlace.db; sourceTree = "<group>"; };
 		DBFED1051C86E04600B5CE48 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		DBFED1061C86E04600B5CE48 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -129,17 +129,156 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB4BEA8E1C8852CD00B8B707 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BEA8F1C8852D700B8B707 /* Controller */,
+				DB4BEA901C8852DE00B8B707 /* Model */,
+			);
+			name = Favorites;
+			sourceTree = "<group>";
+		};
+		DB4BEA8F1C8852D700B8B707 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DB4AE6611C88269B00BA789F /* FavoritesTableViewController.h */,
+				DB4AE6621C88269B00BA789F /* FavoritesTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DB4BEA901C8852DE00B8B707 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DB4AE65B1C8821CE00BA789F /* FavoritesPlace.h */,
+				DB4AE65C1C8821CE00BA789F /* FavoritesPlace.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DB4BEA911C8852EA00B8B707 /* List Of Place */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BEA921C8852FC00B8B707 /* Controller */,
+				DB4BEA931C88530800B8B707 /* Model */,
+			);
+			name = "List Of Place";
+			sourceTree = "<group>";
+		};
+		DB4BEA921C8852FC00B8B707 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DBFED0E51C854C2600B5CE48 /* PlaceDetailViewController.h */,
+				DBFED0E61C854C2600B5CE48 /* PlaceDetailViewController.m */,
+				DBFED0E21C854C0C00B5CE48 /* ListOfPlacesTableViewController.h */,
+				DBFED0E31C854C0C00B5CE48 /* ListOfPlacesTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DB4BEA931C88530800B8B707 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBFED0F01C85584B00B5CE48 /* ListOfPlace.h */,
+				DBFED0F11C85584B00B5CE48 /* ListOfPlace.m */,
+				DB4BEA971C88534100B8B707 /* Entitiy */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DB4BEA941C88531000B8B707 /* Type Of Palce */ = {
+			isa = PBXGroup;
+			children = (
+				DB4BEA951C88531F00B8B707 /* Controller */,
+				DB4BEA961C88532800B8B707 /* Model */,
+			);
+			name = "Type Of Palce";
+			sourceTree = "<group>";
+		};
+		DB4BEA951C88531F00B8B707 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DBFED0DF1C854BF200B5CE48 /* TypeOfPlaceTableViewController.h */,
+				DBFED0E01C854BF200B5CE48 /* TypeOfPlaceTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DB4BEA961C88532800B8B707 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DBFED0E81C854C3B00B5CE48 /* TypeOfPlace.h */,
+				DBFED0E91C854C3B00B5CE48 /* TypeOfPlace.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DB4BEA971C88534100B8B707 /* Entitiy */ = {
+			isa = PBXGroup;
+			children = (
+				DBFED0F51C857D5F00B5CE48 /* Place.h */,
+				DBFED0F61C857D5F00B5CE48 /* Place.m */,
+			);
+			name = Entitiy;
+			sourceTree = "<group>";
+		};
+		DB4BEA981C88534B00B8B707 /* Singleton */ = {
+			isa = PBXGroup;
+			children = (
+				DBFED0EB1C8550CC00B5CE48 /* LocationManager.h */,
+				DBFED0EC1C8550CC00B5CE48 /* LocationManager.m */,
+				DBFED1011C86DCDC00B5CE48 /* DbAccess.h */,
+				DBFED1021C86DCDD00B5CE48 /* DbAccess.m */,
+			);
+			name = Singleton;
+			sourceTree = "<group>";
+		};
+		DB4BEA991C88535700B8B707 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				DBFED0F81C858DCB00B5CE48 /* UIImage+ImageAsync.h */,
+				DBFED0F91C858DCB00B5CE48 /* UIImage+ImageAsync.m */,
+				DBFED0FC1C85AF2E00B5CE48 /* MBProgressHUD.h */,
+				DBFED0FD1C85AF2E00B5CE48 /* MBProgressHUD.m */,
+				DB4BEA8B1C8839C800B8B707 /* UIView+Gradient.h */,
+				DB4BEA8C1C8839C800B8B707 /* UIView+Gradient.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		DB4BEA9A1C88538F00B8B707 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DBFED0B51C84860900B5CE48 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		DB4BEA9B1C88539600B8B707 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				DBFED0AF1C84860900B5CE48 /* AppDelegate.h */,
+				DBFED0B01C84860900B5CE48 /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		DB4BEA9C1C8853BA00B8B707 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				DBFED0B21C84860900B5CE48 /* ViewController.h */,
+				DBFED0B31C84860900B5CE48 /* ViewController.m */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
 		DBFED0A01C84860900B5CE48 = {
 			isa = PBXGroup;
 			children = (
-				DBFED1051C86E04600B5CE48 /* libsqlite3.0.tbd */,
-				DBFED1061C86E04600B5CE48 /* libsqlite3.tbd */,
-				DBFED0EE1C85515300B5CE48 /* CoreLocation.framework */,
 				DBFED0AB1C84860900B5CE48 /* Near By Place */,
 				DBFED0C51C84860E00B5CE48 /* Near By PlaceTests */,
 				DBFED0D01C84860F00B5CE48 /* Near By PlaceUITests */,
 				DBFED0AA1C84860900B5CE48 /* Products */,
-				DBFED1041C86E02100B5CE48 /* nearByPlace.db */,
 				DBFED0F41C85595800B5CE48 /* Constant.pch */,
 			);
 			sourceTree = "<group>";
@@ -157,37 +296,16 @@
 		DBFED0AB1C84860900B5CE48 /* Near By Place */ = {
 			isa = PBXGroup;
 			children = (
-				DBFED0FC1C85AF2E00B5CE48 /* MBProgressHUD.h */,
-				DBFED0FD1C85AF2E00B5CE48 /* MBProgressHUD.m */,
-				DBFED0AF1C84860900B5CE48 /* AppDelegate.h */,
-				DBFED0B01C84860900B5CE48 /* AppDelegate.m */,
-				DBFED0B21C84860900B5CE48 /* ViewController.h */,
-				DBFED0B31C84860900B5CE48 /* ViewController.m */,
-				DBFED0E51C854C2600B5CE48 /* PlaceDetailViewController.h */,
-				DBFED0E61C854C2600B5CE48 /* PlaceDetailViewController.m */,
-				DBFED0E21C854C0C00B5CE48 /* ListOfPlacesTableViewController.h */,
-				DB4AE6611C88269B00BA789F /* FavoritesTableViewController.h */,
-				DB4AE6621C88269B00BA789F /* FavoritesTableViewController.m */,
-				DBFED0E31C854C0C00B5CE48 /* ListOfPlacesTableViewController.m */,
-				DBFED0DF1C854BF200B5CE48 /* TypeOfPlaceTableViewController.h */,
-				DBFED0E01C854BF200B5CE48 /* TypeOfPlaceTableViewController.m */,
-				DBFED0E81C854C3B00B5CE48 /* TypeOfPlace.h */,
-				DBFED0E91C854C3B00B5CE48 /* TypeOfPlace.m */,
-				DBFED0EB1C8550CC00B5CE48 /* LocationManager.h */,
-				DBFED0EC1C8550CC00B5CE48 /* LocationManager.m */,
-				DBFED0F01C85584B00B5CE48 /* ListOfPlace.h */,
-				DBFED0F11C85584B00B5CE48 /* ListOfPlace.m */,
-				DBFED0F51C857D5F00B5CE48 /* Place.h */,
-				DBFED0F61C857D5F00B5CE48 /* Place.m */,
-				DBFED1011C86DCDC00B5CE48 /* DbAccess.h */,
-				DBFED1021C86DCDD00B5CE48 /* DbAccess.m */,
-				DB4AE65B1C8821CE00BA789F /* FavoritesPlace.h */,
-				DB4AE65C1C8821CE00BA789F /* FavoritesPlace.m */,
-				DB4BEA8B1C8839C800B8B707 /* UIView+Gradient.h */,
-				DB4BEA8C1C8839C800B8B707 /* UIView+Gradient.m */,
-				DBFED0B51C84860900B5CE48 /* Main.storyboard */,
+				DB4BEA9B1C88539600B8B707 /* App Delegate */,
+				DB4BEA991C88535700B8B707 /* Category */,
+				DB4BEA911C8852EA00B8B707 /* List Of Place */,
+				DB4BEA8E1C8852CD00B8B707 /* Favorites */,
+				DB4BEA941C88531000B8B707 /* Type Of Palce */,
+				DB4BEA981C88534B00B8B707 /* Singleton */,
+				DB4BEA9A1C88538F00B8B707 /* View */,
 				DBFED0FB1C859E0D00B5CE48 /* Image */,
 				DBFED0B81C84860A00B5CE48 /* Assets.xcassets */,
+				DB4BEA9C1C8853BA00B8B707 /* Misc */,
 				DBFED0BA1C84860A00B5CE48 /* LaunchScreen.storyboard */,
 				DBFED0BD1C84860A00B5CE48 /* Info.plist */,
 				DBFED10E1C86F69F00B5CE48 /* Framwork */,
@@ -199,6 +317,9 @@
 		DBFED0AC1C84860900B5CE48 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DBFED1051C86E04600B5CE48 /* libsqlite3.0.tbd */,
+				DBFED1061C86E04600B5CE48 /* libsqlite3.tbd */,
+				DBFED1041C86E02100B5CE48 /* nearByPlace.db */,
 				DBFED0AD1C84860900B5CE48 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -225,8 +346,6 @@
 		DBFED0FB1C859E0D00B5CE48 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				DBFED0F81C858DCB00B5CE48 /* UIImage+ImageAsync.h */,
-				DBFED0F91C858DCB00B5CE48 /* UIImage+ImageAsync.m */,
 			);
 			name = Image;
 			sourceTree = "<group>";
@@ -234,6 +353,7 @@
 		DBFED10E1C86F69F00B5CE48 /* Framwork */ = {
 			isa = PBXGroup;
 			children = (
+				DBFED0EE1C85515300B5CE48 /* CoreLocation.framework */,
 			);
 			name = Framwork;
 			sourceTree = "<group>";
