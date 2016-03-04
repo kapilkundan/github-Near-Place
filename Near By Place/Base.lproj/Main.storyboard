@@ -32,15 +32,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Near By Place" id="meL-7h-fji">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="85C-KG-2oR">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LKB-hY-rF2">
-                                <rect key="frame" x="447" y="7" width="133" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show Favorites"/>
-                                <connections>
-                                    <segue destination="ihS-qn-z6t" kind="show" id="WVD-Op-tWm"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="bookmarks" id="6JO-bV-azs">
+                            <connections>
+                                <segue destination="ihS-qn-z6t" kind="show" id="bpk-8c-Inc"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>

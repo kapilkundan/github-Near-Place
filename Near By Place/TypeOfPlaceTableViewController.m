@@ -25,18 +25,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-  //  UIBarButtonItem * rightItemButton = [[UIBarButtonItem alloc] initWithTitle:@"Favorites" style:UIBarButtonItemStyleDone target:self action:@selector(showFavorites:)];
-   // self.navigationItem.rightBarButtonItem = rightItemButton;
+
 }
 
-/*
--(void)showFavorites:(id)sender
-{
 
-    UIStoryboard *stroryBoard = MainStoryBoard;
-    FavoritesTableViewController * favortiesPlaceViewController = [stroryBoard instantiateViewControllerWithIdentifier:@"FavoritesTableViewController"];
-    [self presentViewController:favortiesPlaceViewController animated:YES completion:nil];
-}*/
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

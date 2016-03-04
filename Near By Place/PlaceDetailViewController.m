@@ -19,8 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIBarButtonItem * mapButton = [[UIBarButtonItem alloc] initWithTitle:@"Favorite" style:UIBarButtonItemStylePlain target:self action:@selector(favorites:)];
-    self.navigationItem.rightBarButtonItem = mapButton;
+    
+    UIBarButtonItem * bookMarkButton  = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(favorites:)];
+    self.navigationItem.rightBarButtonItem = bookMarkButton;
     
 }
 

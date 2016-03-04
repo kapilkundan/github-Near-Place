@@ -28,7 +28,9 @@ UIRefreshControl *refreshControl;
     [self.refreshControl addTarget:self action:@selector(featchList:) forControlEvents:UIControlEventValueChanged];
     
     [self.tableView addSubview:self.refreshControl];
-    
+    self.tableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height);
+    [self.refreshControl beginRefreshing];
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -38,8 +40,7 @@ UIRefreshControl *refreshControl;
 -(void)viewWillAppear:(BOOL)animated
 {
 
-    self.tableView.contentOffset = CGPointMake(0, -self.refreshControl.frame.size.height);
-    [self.refreshControl beginRefreshing];
+      self.title = self.typeOfPlace.capitalizedString;
 }
 -(void)featchList:(NSString *)type
 {
@@ -87,11 +88,13 @@ ListOfPlace *listOfPlaceModel = [ListOfPlace new];
     label.text = place.name;
     UIImageView *icon = [cell viewWithTag:101];
     if (!place.imageIcon) {
+        [MBProgressHUD showHUDAddedTo:icon animated:YES];
         [UIImage loadFromURL:[NSURL URLWithString:place.icon] callback:^(UIImage *image) {
             icon.image = image;
             place.imageIcon = image;
 
             [listOfPlace replaceObjectAtIndex:indexPath.row withObject:place];
+                    [MBProgressHUD hideAllHUDsForView:icon animated:YES];
         }];
     }
     else{
