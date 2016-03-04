@@ -23,6 +23,8 @@
         {
             [self.locationManager requestWhenInUseAuthorization];
         }
+        [self.locationManager startMonitoringSignificantLocationChanges];
+ 
             [self.locationManager startUpdatingLocation];
     }
     return self;
@@ -107,7 +109,5 @@
 
 
 }
-
-
 
 @end

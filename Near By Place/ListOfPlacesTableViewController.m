@@ -11,6 +11,7 @@
 #import "Place.h"
 #import "UIImage+ImageAsync.h"
 #import "PlaceDetailViewController.h"
+#import "LocationManager.h"
 @interface ListOfPlacesTableViewController ()
 {
 
@@ -41,7 +42,7 @@ UIRefreshControl *refreshControl;
 {
 
       self.title = self.typeOfPlace.capitalizedString;
-}
+  }
 -(void)featchList:(NSString *)type
 {
     
@@ -103,7 +104,7 @@ ListOfPlace *listOfPlaceModel = [ListOfPlace new];
     }
   
     // Configure the cell...
-    
+
     return cell;
 }
 

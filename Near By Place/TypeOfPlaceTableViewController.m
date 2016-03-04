@@ -49,7 +49,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     NSString *text  = listOfPlaces[indexPath.row];
     cell.textLabel.text  = text.capitalizedString;
-    
+    [cell.backgroundView addGradient:@[[UIColor redColor],[UIColor blackColor]]];
     return cell;
 }
 

@@ -75,6 +75,13 @@
                             {
                                 [place setValue:[groupDic valueForKey:key] forKey:@"keyId"];
                             }
+                            else if([key isEqualToString:@"photos"])
+                            {
+                                if ([[[groupDic valueForKey:key] valueForKey:@"photo_reference"] count]>0) {
+                                    [place setValue:[[groupDic valueForKey:key] valueForKey:@"photo_reference"][0] forKey:@"photo_reference"];
+                                }
+                            
+                            }
                         }
                         
                         [groups addObject:place];
